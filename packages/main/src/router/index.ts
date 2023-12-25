@@ -3,7 +3,7 @@ import each from './each'
 import routes from './routes'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
 

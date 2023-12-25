@@ -7,9 +7,6 @@ declare global {
         $emit: (event: string, ...arg: any[]) => unknown
         $on: (event: string, ...arg: any[]) => unknown
       }
-      props: {
-        [key: string]: any
-      }
     }
   }
 }
@@ -22,36 +19,24 @@ if (isInWujie) {
   document.body.classList.add('is_wujie')
 }
 
-export const wujieProps = window.$wujie.props
-
 export function wujieEmit(event: string, ...arg: any[]) {
-  if (isInWujie && appName) {
-    window.$wujie.bus.$emit(event, appName, ...arg)
-  }
+  if (!isInWujie || !appName) return
+  window.$wujie.bus.$emit(event, appName, ...arg)
 }
 
-export function wujieOn(event: string, callBack: (...arg: any[]) => void) {
-  window.$wujie.bus.$on(event, (app: string, ...onArg: any[]) => {
-    if (app !== appName) return
-    callBack(...onArg)
-  })
-}
-
-export function useWujie(name: string, appRouter: any, Router?: any) {
+export function useWujie(name: string, appRouter: any) {
   appName = name
   const { push } = appRouter
   appRouter.rowPush = push
 
   window.$wujie.bus.$on('routeChange', (app: string, val: any) => {
-    console.log('🚀 ~ file: index.ts:47 ~ window.$wujie.bus.$on ~ app:', app, appName)
-    if (app === appName) {
-      appRouter.rowPush(val)
-    }
+    if (app !== appName) return
+    appRouter.rowPush(val)
   })
 
-  const fnTarget = Router ? Router.prototype : appRouter
+  const fnTarget = appRouter.prototype ? appRouter.prototype : appRouter
 
-  fnTarget.push = (location: any, onComplete: any, onAbort: any) => {
+  fnTarget.push = (location: string, onComplete: any, onAbort: any) => {
     if (!onComplete && !onAbort) {
       return new Promise((resolve, reject) => {
         wujieEmit('push', location, resolve, reject)

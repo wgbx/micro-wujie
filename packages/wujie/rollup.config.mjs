@@ -10,15 +10,15 @@ export default {
   output: [
     {
       name,
-      file: `dist/${name}.umd.js`,
+      file: `dist/${name}.umd.min.js`,
       format: 'umd',
-      plugins: [terser()]
+      // plugins: [terser()]
     },
     {
       name,
       file: `dist/${name}.es.min.js`,
       format: 'es',
-      plugins: [terser()]
+      // plugins: [terser()]
     }
   ],
   plugins: [NodeResolve(), commonjs(), typescript()]

@@ -1,10 +1,20 @@
 <script setup lang="ts">
 import routes from './router/routes'
+import { useWujieStore } from '@/store'
 
 defineOptions({ name: 'App' })
 
+const route = useRoute()
 const router = useRouter()
+const wujieStore = useWujieStore()
 const ROUTER_MAP = ref(routes.map(({ name, meta }) => ({ name, title: meta.title })))
+console.log('🚀 ~ file: App.vue:8 ~ ROUTER_MAP:', ROUTER_MAP)
+
+function handleGoPage(name: string) {
+  const { path, query, params } = route
+  router.push({ name })
+  wujieStore.emit('routeChange', { path, query, params })
+}
 </script>
 
 <template>
