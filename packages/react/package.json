@@ -1,0 +1,43 @@
+{
+  "name": "@micro-wujie/react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.2.5",
+    "antd": "^5.8.2",
+    "classnames": "^2.3.2",
+    "modern-css-reset": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zustand": "^4.3.8"
+  },
+  "devDependencies": {
+    "wujie": "workspace:*",
+    "@antfu/eslint-config": "^0.40.2",
+    "@commitlint/cli": "^17.6.7",
+    "@commitlint/config-conventional": "^17.6.7",
+    "@types/node": "^20.3.0",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "@unocss/preset-rem-to-px": "^0.53.1",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react": "^7.33.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "sass": "^1.63.3",
+    "sass-loader": "^13.3.2",
+    "typescript": "^5.0.2",
+    "unocss": "^0.53.1",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.1",
+    "vite": "^4.3.9"
+  }
+}
