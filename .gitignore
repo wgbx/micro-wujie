@@ -1,3 +1,5 @@
 node_modules
 dist
 !packages/wujie/dist
+auto-imports.d.ts
+components.d.ts
