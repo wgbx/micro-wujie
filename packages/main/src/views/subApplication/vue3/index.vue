@@ -10,10 +10,8 @@ defineOptions({ name: 'Vue3App' })
 const wujieStore = useWujieStore()
 const route = useRoute()
 
-const url = computed(() => {
-  return `${location.origin}/${appNamePath}${route.fullPath}`
-})
-console.log('🚀 ~ file: index.vue:16 ~ url ~ url:', url.value)
+const url = computed(() => `${location.origin}/${appNamePath}${route.fullPath}`)
+console.log('🚀 ~ file: index.vue:16 ~ url ~ url:', url.value, route.fullPath)
 
 function handleBeforeLoad() {
   wujieStore.setCurrentApp(appName)
@@ -36,5 +34,5 @@ function handleDeactivated() {
     :activated="handleActivated"
     :deactivated="handleDeactivated"
     :props="{}"
-  ></WujieVue>
+  />
 </template>

@@ -3,3 +3,5 @@ export {}
 declare global {
   type Nullable<T> = T | null
 }
+
+declare module 'element-plus/dist/locale/zh-cn.mjs'

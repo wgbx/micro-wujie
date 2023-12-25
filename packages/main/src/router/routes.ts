@@ -2,7 +2,7 @@ import vue3 from './vue3'
 
 export default [
   {
-    path: '/admin',
+    path: '/home',
     name: 'Home',
     meta: { title: '首页' },
     component: () => import('../views/home/index.vue')
