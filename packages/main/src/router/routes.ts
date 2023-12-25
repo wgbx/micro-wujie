@@ -1,3 +1,5 @@
+import vue3 from './vue3'
+
 export default [
   {
     path: '/admin',
@@ -10,5 +12,6 @@ export default [
     name: 'Detail',
     meta: { title: '详情页' },
     component: () => import('../views/detail/index.vue')
-  }
+  },
+  ...vue3
 ]

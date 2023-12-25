@@ -1,20 +1,9 @@
 <script setup lang="ts">
-import routes from './router/routes'
-
 defineOptions({ name: 'App' })
-
-const router = useRouter()
-const ROUTER_MAP = ref(routes.map(({ name, meta }) => ({ name, title: meta.title })))
 </script>
 
 <template>
-  <div class="page">
-    <svg-icon name="star" />
-    <div class="page-routers">
-      <div v-for="item in ROUTER_MAP" :key="item.name" @click="router.push({ name: item.name })">{{ item.title }}</div>
-    </div>
-    <router-view />
-  </div>
+  <router-view />
 </template>
 
 <style lang="scss" scoped>
@@ -36,16 +25,13 @@ const ROUTER_MAP = ref(routes.map(({ name, meta }) => ({ name, title: meta.title
 
   .page-routers {
     display: flex;
+    width: 250px;
     justify-content: space-between;
-    margin: 40px;
+    margin: 40px 0;
     line-height: 60px;
     color: #0076ff;
     text-underline-offset: 10px;
     text-decoration: underline;
-    div {
-      margin: 0 20px;
-      cursor: pointer;
-    }
   }
 }
 

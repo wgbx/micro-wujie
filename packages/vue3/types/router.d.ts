@@ -5,7 +5,7 @@ declare module 'vue-router' {
   interface RouteMeta {
     title: string
     icon?: string
-    unlink?: boolean
+    unlink?: boolean // 用于路由被面包屑推导可访问但需要额外参数时，禁用面包屑链接
     auth?: string
   }
 

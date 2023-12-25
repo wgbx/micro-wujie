@@ -12,6 +12,7 @@
   },
   "scripts": {
     "dev:main": "pnpm -F @micro-wujie/main run dev",
+    "dev:vue3": "pnpm -F @micro-wujie/vue3 run dev",
     "prepare": "husky install"
   },
   "author": "微光北下",
