@@ -19,7 +19,7 @@ const ROUTER_MAP = ref(routes.map(({ name, meta }) => ({ name, title: meta.title
 
 <style lang="scss" scoped>
 .page {
-  width: 750px;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
