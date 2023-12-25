@@ -1,6 +1,6 @@
 export default [
   {
-    path: '/',
+    path: '/admin',
     name: 'Home',
     meta: { title: '首页' },
     component: () => import('../views/home/index.vue')
