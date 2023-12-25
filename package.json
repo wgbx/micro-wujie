@@ -1,0 +1,26 @@
+{
+  "name": "micro-wujie",
+  "version": "1.0.0",
+  "description": "",
+  "lint-staged": {
+    "*.{ts,js,scss,scss,html,md}": [
+      "prettier --write"
+    ],
+    "*.vue": [
+      "prettier --parser=vue --write"
+    ]
+  },
+  "scripts": {
+    "dev:main": "pnpm -F @micro-wujie/main run dev",
+    "prepare": "husky install"
+  },
+  "author": "wgbx",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.3.0",
+    "prettier": "^3.1.1"
+  }
+}
