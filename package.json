@@ -14,7 +14,7 @@
     "dev:main": "pnpm -F @micro-wujie/main run dev",
     "prepare": "husky install"
   },
-  "author": "wgbx",
+  "author": "微光北下",
   "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",

@@ -1,0 +1,24 @@
+{
+  "name": "wujie",
+  "version": "0.0.1",
+  "typings": "dist/index.d.ts",
+  "main": "dist/wujie.umd.min.js",
+  "module": "dist/wujie.es.min.js",
+  "scripts": {
+    "build": "rollup --config ./rollup.config.mjs"
+  },
+  "author": "微光北下",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.1",
+    "@types/node": "^20.3.3",
+    "prettier": "^3.0.3",
+    "rollup": "^3.21.5",
+    "rollup-plugin-typescript2": "^0.35.0",
+    "tslib": "^2.6.0",
+    "typescript": "^5.2.2"
+  }
+}
