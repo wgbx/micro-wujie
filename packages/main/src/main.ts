@@ -7,7 +7,6 @@ import './style/index.scss'
 import 'uno.css'
 import router from './router'
 import store from './store'
-
 import 'virtual:svg-icons-register'
 
 const app = createApp(App)

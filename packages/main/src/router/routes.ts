@@ -1,4 +1,5 @@
 import vue3 from './vue3'
+import react from './react'
 
 export default [
   {
@@ -13,5 +14,6 @@ export default [
     meta: { title: '详情页' },
     component: () => import('../views/detail/index.vue')
   },
-  ...vue3
+  ...vue3,
+  ...react
 ]

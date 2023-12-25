@@ -16,9 +16,11 @@
     "qs": "^6.11.1",
     "vue": "^3.3.4",
     "vue-router": "^4.1.6",
-    "wujie-vue3": "^1.0.22"
+    "wujie-vue3": "^1.0.22",
+    "wujie-react": "^1.0.22"
   },
   "devDependencies": {
+    "wujie": "workspace:*",
     "@antfu/eslint-config": "^2.4.6",
     "@types/qs": "^6.9.7",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
