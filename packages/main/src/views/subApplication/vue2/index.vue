@@ -11,7 +11,6 @@ const wujieStore = useWujieStore()
 const route = useRoute()
 
 const url = computed(() => `http://vue2.wujie.cn/${appNamePath}${route.fullPath}`)
-console.log('🚀 ~ file: index.vue:16 ~ url ~ url:', url.value, route.fullPath)
 
 function handleBeforeLoad() {
   wujieStore.setCurrentApp(appName)

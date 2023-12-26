@@ -17,7 +17,6 @@ export const useWujieStore = defineStore({
       this.currentApp = name
     },
     emit(event: string, ...arg: any[]) {
-      console.log('🚀 ~ file: wujie.ts:20 ~ emit ~ event:', event)
       bus.$emit(event, this.currentApp, ...arg)
     },
     rowEmit(event: string, ...arg: any[]) {

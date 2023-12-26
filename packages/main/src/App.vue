@@ -8,7 +8,6 @@ const route = useRoute()
 const router = useRouter()
 const wujieStore = useWujieStore()
 const ROUTER_MAP = ref(routes.map(({ name, meta }) => ({ name, title: meta.title })))
-console.log('🚀 ~ file: App.vue:8 ~ ROUTER_MAP:', ROUTER_MAP)
 
 function handleGoPage(name: string) {
   const { path, query, params } = route

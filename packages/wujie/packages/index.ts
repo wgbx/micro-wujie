@@ -43,7 +43,6 @@ export function useWujie(name: string, appRouter: any, Router?: any) {
   appRouter.rowPush = push
 
   window.$wujie.bus.$on('routeChange', (app: string, val: any) => {
-    console.log('🚀 ~ file: index.ts:47 ~ window.$wujie.bus.$on ~ app:', app, appName)
     if (app === appName) {
       appRouter.rowPush(val)
     }
