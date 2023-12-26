@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import WujieVue from 'wujie-react'
+import WujieVue from 'wujie-vue3'
 import { useWujieStore } from '@/store'
 
 const appName = 'react'
