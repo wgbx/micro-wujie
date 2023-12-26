@@ -12,6 +12,7 @@
   },
   "scripts": {
     "dev:main": "pnpm -F @micro-wujie/main run dev",
+    "dev:vue2": "pnpm -F @micro-wujie/vue2 run dev",
     "dev:vue3": "pnpm -F @micro-wujie/vue3 run dev",
     "dev:react": "pnpm -F @micro-wujie/react run dev",
     "prepare": "husky install"

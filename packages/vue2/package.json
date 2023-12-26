@@ -1,0 +1,22 @@
+{
+  "name": "@micro-wujie/vue2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "2.6.14",
+    "modern-css-reset": "^1.4.0",
+    "vue-router": "^3.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "sass": "^1.55.0",
+    "vite": "^4.3.1",
+    "vite-plugin-vue2": "^2.0.3",
+    "vue-template-compiler": "2.6.14"
+  }
+}
