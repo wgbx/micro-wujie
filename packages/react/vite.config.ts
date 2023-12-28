@@ -6,7 +6,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 
 export default defineConfig({
   server: {
-    port: 8881
+    port: 8883
   },
   resolve: {
     alias: {
