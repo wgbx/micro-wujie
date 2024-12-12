@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import WujieVue from 'wujie-vue3'
 import { useWujieStore } from '@/store'
+import { URL_MAP } from '@/constant'
 
 const appName = 'vue3'
 const appNamePath = 'vue3'
@@ -10,7 +11,7 @@ defineOptions({ name: 'Vue3App' })
 const wujieStore = useWujieStore()
 const route = useRoute()
 
-const url = computed(() => `http://vue3.wujie.cn/${appNamePath}${route.fullPath}`)
+const url = computed(() => `${URL_MAP[appName]}${appNamePath}${route.fullPath}`)
 
 function handleBeforeLoad() {
   wujieStore.setCurrentApp(appName)

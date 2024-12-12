@@ -12,7 +12,7 @@ export default defineConfig(() => {
   return {
     base: '/admin/',
     server: {
-      port: 8880
+      port: 8000
     },
     plugins: [
       vue(),

@@ -12,7 +12,7 @@ export default defineConfig(() => {
   return {
     base: '/vue3/',
     server: {
-      port: 8881
+      port: 8020
     },
     plugins: [
       vue(),

@@ -9,6 +9,6 @@ export default {
     }
   },
   server: {
-    port: 8882
+    port: 8010
   }
 }
