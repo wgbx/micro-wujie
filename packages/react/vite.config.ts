@@ -5,6 +5,7 @@ import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 
 export default defineConfig({
+  base: '/react/',
   server: {
     port: 8030
   },
