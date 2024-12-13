@@ -14,14 +14,18 @@ const route = useRoute()
 const url = computed(() => `${URL_MAP[appName]}${appNamePath}${route.fullPath}`)
 
 function handleBeforeLoad() {
-  wujieStore.setCurrentApp(appName)
+  setCurrentApp(appName)
 }
 
 function handleActivated() {
-  wujieStore.setCurrentApp(appName)
+  setCurrentApp(appName)
 }
 function handleDeactivated() {
-  wujieStore.setCurrentApp('')
+  setCurrentApp('')
+}
+
+function setCurrentApp(appName: string) {
+  wujieStore.setCurrentApp(appName)
 }
 </script>
 
